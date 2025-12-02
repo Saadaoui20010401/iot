@@ -6,7 +6,8 @@ urlpatterns = [
     path("api",api.Dlist,name='json'),
     path("api/post",api.Dhtviews.as_view(),name='json'),
     #modification
-     path("index", views.dashboard, name="index"),
+      path("index", views.dashboard, name="index_no_slash"),  # sans slash
+    path("index/", views.dashboard, name="index"),  # avec slash
     path("", views.dashboard, name="dashboard"),
     path("latest/", views.latest_json, name="latest_json"),
 
